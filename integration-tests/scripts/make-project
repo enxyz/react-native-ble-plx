@@ -71,6 +71,7 @@ function update-pods {
   if [ -f "$PROJECT_PATH/Podfile" ]; then
     echo 'Updating Podfile dependencies...'
     pushd $PROJECT_PATH
+      pod repo update
       pod update
     popd
   fi
